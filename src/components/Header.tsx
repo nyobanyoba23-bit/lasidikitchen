@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/components/_header.scss';
 import { FaHome, FaCookieBite, FaInfoCircle, FaEnvelope } from 'react-icons/fa'; // Import icons
+import logo from '../assets/images/logo.png'; // Import the new logo image
 
 interface HeaderProps {
   activeSection?: string | null; // Made optional to fix build error
@@ -21,7 +22,9 @@ interface HeaderProps {
     <header className="header">
       <div className="container">
         <div className="logo">
-          <a href="/">La Sidi Kitchen</a>
+          <a href="/">
+            <img src={logo} alt="La Sidi Kitchen Logo" className="logo-img" />
+          </a>
         </div>
         <nav className="main-nav">
           <ul>
