@@ -34,5 +34,12 @@ export const cookieData: Cookie[] = [
     image: require('../assets/images/redvelvet.jpg'), // Placeholder image
     description: 'Kue kering red velvet yang lembut dengan sentuhan rasa coklat dan krim keju.',
     price: 'Rp 20.000/pcs'
+  },
+  {
+    id: 'mint',
+    name: 'Mint Cookies',
+    image: require('../assets/images/mint.jpg'), // New mint image
+    description: 'Kue kering rasa mint yang menyegarkan, perpaduan manis dan dingin.',
+    price: 'Rp 21.000/pcs'
   }
 ];
