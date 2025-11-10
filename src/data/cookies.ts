@@ -9,37 +9,37 @@ export interface Cookie {
 export const cookieData: Cookie[] = [
   {
     id: 'kopi',
-    name: 'Kopi Cookies',
-    image: require('../assets/images/kopi.png'), // Updated to .png
-    description: 'Kue kering rasa kopi yang kaya dan aromatik, cocok untuk pecinta kopi.',
+    name: 'Coffee Cookies',
+    image: require('../assets/images/kopi.png'),
+    description: 'Rich and aromatic coffee-flavored cookies, perfect for coffee lovers.',
     price: 'Rp 17.000/pcs'
   },
   {
     id: 'coklat',
-    name: 'Coklat Cookies',
-    image: require('../assets/images/coklat.png'), // Updated to .png
-    description: 'Kue kering coklat dengan potongan coklat lezat, kenikmatan ganda.',
+    name: 'Chocolate Cookies',
+    image: require('../assets/images/coklat.png'),
+    description: 'Chocolate cookies with delicious chocolate chunks, a double delight.',
     price: 'Rp 18.000/pcs'
   },
   {
     id: 'matcha',
     name: 'Matcha Cookies',
-    image: require('../assets/images/matcha.png'), // Updated to .png
-    description: 'Kue kering matcha dengan rasa teh hijau Jepang yang unik dan menenangkan.',
+    image: require('../assets/images/matcha.png'),
+    description: 'Matcha cookies with a unique and soothing Japanese green tea flavor.',
     price: 'Rp 19.000/pcs'
   },
   {
     id: 'red-velvet',
     name: 'Red Velvet Cookies',
-    image: require('../assets/images/redvelvet.png'), // Updated to .png
-    description: 'Kue kering red velvet yang lembut dengan sentuhan rasa coklat dan krim keju.',
+    image: require('../assets/images/redvelvet.png'),
+    description: 'Soft red velvet cookies with a hint of chocolate and cream cheese flavor.',
     price: 'Rp 20.000/pcs'
   },
   {
     id: 'mint',
     name: 'Mint Cookies',
-    image: require('../assets/images/mint.png'), // Updated to .png
-    description: 'Kue kering rasa mint yang menyegarkan, perpaduan manis dan dingin.',
+    image: require('../assets/images/mint.png'),
+    description: 'Refreshing mint-flavored cookies, a sweet and cool combination.',
     price: 'Rp 21.000/pcs'
   }
 ];
