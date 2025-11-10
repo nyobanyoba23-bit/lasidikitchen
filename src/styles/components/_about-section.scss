@@ -1,0 +1,23 @@
+@import '../_variables.scss';
+
+.about-section {
+  padding: 4rem 0;
+  background-color: $secondary; // Use a softer background for this section
+  color: $text;
+  text-align: center;
+
+  .section-title {
+    font-family: $font-primary;
+    font-size: 3rem;
+    color: $text;
+    margin-bottom: 2rem;
+  }
+
+  .about-text {
+    font-family: $font-secondary;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}

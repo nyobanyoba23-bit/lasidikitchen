@@ -1,0 +1,103 @@
+@import '../_variables.scss';
+
+.hero {
+  padding: 5rem 0;
+  background-color: $background;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  min-height: 90vh;
+
+  .hero-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .hero-content {
+    flex: 0 0 50%;
+    padding: 3rem;
+    background-color: $secondary; // Use theme's secondary color for prominence
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba($text, 0.08);
+    z-index: 2;
+    margin-right: -5rem;
+
+    h1 {
+      font-size: 3.2rem;
+      color: $text;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 1.1rem;
+      color: $text;
+      margin-bottom: 2rem;
+      line-height: 1.7;
+    }
+    
+    .btn {
+      display: inline-block;
+      padding: 0.9rem 1.8rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-family: $font-secondary;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .btn-primary {
+      background-color: $primary;
+      color: $white;
+      border: 2px solid $primary;
+
+      &:hover {
+        background-color: darken($primary, 10%);
+        border-color: darken($primary, 10%);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba($primary, 0.3);
+      }
+    }
+  }
+
+  .hero-image-container {
+    flex: 1;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba($text, 0.15);
+    z-index: 1;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+
+  // --- FIXED MOBILE VIEW ---
+  @media (max-width: 768px) {
+    padding: 4rem 0;
+    min-height: auto;
+
+    .hero-container {
+      flex-direction: column-reverse;
+    }
+    .hero-content {
+      flex: 1;
+      margin-right: 0;
+      margin-bottom: 0;
+      text-align: center;
+      width: 100%;
+      padding: 2rem 1.5rem;
+
+      h1 {
+        font-size: 2.5rem;
+      }
+    }
+    .hero-image-container {
+      width: 100%;
+      flex: auto;
+    }
+  }
+}

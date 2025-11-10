@@ -1,0 +1,42 @@
+@import '../_variables.scss';
+
+.cookie-showcase {
+  padding: 4rem 0;
+  background-color: $background;
+
+  .section-title {
+    text-align: center;
+    font-family: $font-primary;
+    font-size: 3rem;
+    color: $text;
+    margin-bottom: 3rem;
+  }
+
+  .cookie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+
+    // Hide cards by default for the animation
+    .cookie-card {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+  }
+
+  // When the showcase section is visible, animate the cards
+  &.is-visible {
+    .cookie-card {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    // Sass loop to create the staggered delay
+    @for $i from 1 through 12 { // Supports up to 12 cards
+      .cookie-card:nth-child(#{$i}) {
+        transition-delay: #{$i * 0.1}s;
+      }
+    }
+  }
+}

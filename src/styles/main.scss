@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700&display=swap');
+@import 'variables';
+
+/* Basic Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: $font-secondary;
+  background-color: $background;
+  color: $text;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-primary;
+  line-height: 1.2;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Component Imports */
+@import './components/_header.scss';
+@import './components/_hero.scss';
+@import './components/_cookie-card.scss';
+@import './components/_cookie-showcase.scss';
+@import './components/_about-section.scss';
+@import './components/_contact-section.scss';
+@import './components/_footer.scss'; // Import Footer styles
+
+/* App Specific Styles (can be removed later if not needed) */
+.App {
+  // text-align: center; // Removed as components will handle their own alignment
+}
+
+/* --- Scroll Animation --- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.scroll-animation {
+  opacity: 0;
+}
+
+.scroll-animation.is-visible {
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+
+.App-header { // This was placeholder content, can be removed or repurposed
+  // background-color: $secondary;
+  // min-height: 100vh;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  // justify-content: center;
+  // font-size: calc(10px + 2vmin);
+  // color: $text;
+}

@@ -1,0 +1,14 @@
+@import '../_variables.scss';
+
+.footer {
+  background-color: $text;
+  color: $background;
+  padding: 2rem 0;
+  text-align: center;
+  font-family: $font-secondary;
+  font-size: 0.9rem;
+
+  p {
+    margin: 0;
+  }
+}

@@ -1,0 +1,65 @@
+@import '../_variables.scss';
+
+.cookie-card {
+  background-color: $white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba($text, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%; // Ensure cards have equal height
+  padding-bottom: 1rem; // Add padding for content
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba($text, 0.15);
+  }
+
+  .cookie-image-wrapper {
+    width: 100%;
+    height: 200px; // Fixed height for images
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 1rem; // Space between image and text
+    
+    .cookie-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+  }
+
+  &:hover .cookie-image {
+    transform: scale(1.05);
+  }
+
+  .cookie-name {
+    font-family: $font-primary;
+    font-size: 1.8rem;
+    color: $primary;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    padding: 0 1rem; // Added horizontal padding
+  }
+
+  .cookie-description {
+    font-family: $font-secondary;
+    font-size: 1rem;
+    color: $text;
+    margin-bottom: 1rem;
+    padding: 0 1rem; // Added horizontal padding
+    flex-grow: 1; // Allow description to take available space
+  }
+
+  .btn-primary {
+    margin-top: auto; // Push button to the bottom
+    margin-bottom: 1rem; // Add bottom margin
+    align-self: center; // Center the button
+  }
+}
