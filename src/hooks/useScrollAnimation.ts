@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 const useScrollAnimation = <T extends HTMLElement = HTMLDivElement>() => {
   const [isVisible, setIsVisible] = useState(false);
@@ -9,16 +9,18 @@ const useScrollAnimation = <T extends HTMLElement = HTMLDivElement>() => {
       entries.forEach(entry => setIsVisible(entry.isIntersecting));
     });
 
-    if (domRef.current) {
-      observer.observe(domRef.current);
+    const currentRef = domRef.current; // Capture domRef.current in a variable
+
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (domRef.current) {
-        observer.unobserve(domRef.current);
+      if (currentRef) { // Use the captured variable in cleanup
+        observer.unobserve(currentRef);
       }
     };
-  }, []);
+  }, [domRef]); // Added domRef to dependency array
 
   return [domRef, isVisible];
 };
