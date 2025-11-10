@@ -12,7 +12,7 @@ const ContactSection: React.FC = () => {
           Ready to experience the delight? Find us on social media or send us an email!
         </p>
         <div className="contact-links">
-                        <a href="https://wa.me/6282259926183" className="contact-link-item" target="_blank" rel="noopener noreferrer">
+                        <a href="https://wa.me/628979237175" className="contact-link-item" target="_blank" rel="noopener noreferrer">
                           {/* @ts-ignore */}
                           <FaWhatsapp className="contact-icon" />
                           <span>WhatsApp</span>
