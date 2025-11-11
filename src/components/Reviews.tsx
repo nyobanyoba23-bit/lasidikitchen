@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { supabase } from '../supabaseClient';
 import '../styles/components/_reviews.scss';
 
+// This component handles fetching, displaying, and submitting customer reviews.
 interface Review {
   id: string;
   name: string;
