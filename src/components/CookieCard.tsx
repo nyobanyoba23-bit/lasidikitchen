@@ -16,7 +16,7 @@ const CookieCard: React.FC<CookieCardProps> = ({ name, description, imageUrl }) 
       <h3 className="cookie-name">{name}</h3>
       <p className="cookie-description">{description}</p>
       <a 
-      href={`https://wa.me/6282259926183?text=Halo,%20saya%20tertarik%20dengan%20${name}%20cookies%20Anda!`} 
+      href={`https://wa.me/628979237175?text=Halo,%20saya%20tertarik%20dengan%20${name}%20cookies%20Anda!`} 
       target="_blank" 
       rel="noopener noreferrer" 
       className="btn btn-primary"
