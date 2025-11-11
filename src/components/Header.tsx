@@ -24,14 +24,15 @@ interface HeaderProps {
         <div className="logo">
           <a href="/">
             <img src={logo} alt="La Sidi Kitchen Logo" className="logo-img" />
+            <span className="logo-text">La Sidi Kitchen</span> {/* Added text next to logo */}
           </a>
         </div>
         <nav className="main-nav">
           <ul>
             {navLinks.map(link => (
               <li key={link.href}>
-                <a 
-                  href={link.href} 
+                <a
+                  href={link.href}
                   className={activeSection === link.href.substring(1) ? 'active' : ''}
                 >
                   {link.icon}

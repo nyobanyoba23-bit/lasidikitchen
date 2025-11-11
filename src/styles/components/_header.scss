@@ -17,16 +17,22 @@
 
   .logo {
     a {
-      font-family: $font-primary;
-      font-size: 1.8rem;
-      color: $primary;
-      text-decoration: none;
-      font-weight: bold;
-    }
+      display: flex; // Use flexbox for alignment
+      align-items: center; // Vertically center items
+      gap: 10px; // Space between logo and text
+      text-decoration: none; // Remove underline from link
 
-    .logo-img { // Added styling for the logo image
-      max-height: 50px; // Adjust as needed for normal size
-      width: auto; // Maintain aspect ratio
+      .logo-img { // Styling for the logo image
+        max-height: 50px; // Adjust as needed for normal size
+        width: auto; // Maintain aspect ratio
+      }
+
+      .logo-text { // Styling for the text next to the logo
+        font-family: $font-primary;
+        font-size: 1.8rem;
+        color: $primary;
+        font-weight: bold;
+      }
     }
   }
 }
