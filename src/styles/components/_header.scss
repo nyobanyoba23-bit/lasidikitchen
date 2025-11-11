@@ -23,6 +23,11 @@
       text-decoration: none;
       font-weight: bold;
     }
+
+    .logo-img { // Added styling for the logo image
+      max-height: 50px; // Adjust as needed for normal size
+      width: auto; // Maintain aspect ratio
+    }
   }
 }
 
