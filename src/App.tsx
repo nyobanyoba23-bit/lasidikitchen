@@ -5,6 +5,7 @@ import CookieShowcase from './components/CookieShowcase';
 import AboutSection from './components/AboutSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
+import Reviews from './components/Reviews'; // Import the Reviews component
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <CookieShowcase />
       <AboutSection />
       <ContactSection />
+      <Reviews /> {/* Add the Reviews component here */}
       <Footer />
     </div>
   );
